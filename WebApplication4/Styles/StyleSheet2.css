@@ -1,0 +1,68 @@
+﻿@font-face {
+    font-family: 'librebarcode128text-regular';
+    src: url('librebarcode128text-regular.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'rajdhani-medium';
+    src: url('rajdhani-medium.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'chakrapetch-bold';
+    src: url('chakrapetch-bold.ttf') format('truetype');
+}
+
+body {
+}
+h1#title {
+    font-family: 'chakrapetch-bold';
+    text-align: center;
+    color: #FCEE0C;
+    text-shadow: 3px 3px 3px black;
+}
+p#subtext{
+    font-family: 'chakrapetch-bold';
+    text-align: center;
+    color: #FCEE0C;
+    text-shadow: 3px 3px 3px black;
+}
+footer#text1 {
+    font-family: Consolas;
+    text-align: left;
+    color: #FCEE0C;
+    text-shadow: 3px 3px 3px black;
+    position: absolute;
+    bottom: 1px;
+    left: 0;
+    right: 0;
+    height: 20px;
+    width: 225px;
+    background: rgba(0,0,0,.2);
+}
+footer#text2 {
+    font-family: Consolas;
+    text-align: left;
+    text-shadow: 3px 3px 3px black;
+    position: absolute;
+    bottom: 1px;
+    left: 225px;
+    right: 0;
+    height: 20px;
+    width: 170px;
+    background: rgba(0,0,0,.2);
+    text-decoration: none;
+    color: #FCEE0C;
+
+}
+a:link#text3 {
+    color: #FCEE0C;
+    text-decoration: none;
+}
+a:visited#text3 {
+    color: #FCEE0C;
+    text-decoration: none;
+}
+a:hover#text3 {
+    text-decoration: underline;
+}

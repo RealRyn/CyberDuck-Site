@@ -1,0 +1,53 @@
+﻿body {
+}
+
+p {
+    font-family: Consolas;
+    text-align: left;
+    color: #FCEE0C;
+    text-shadow: 3px 3px 3px black;
+    height: 150%;
+    background: rgba(0,0,0,.2);
+}
+footer#text1 {
+    font-family: Consolas;
+    text-align: left;
+    color: #FCEE0C;
+    text-shadow: 3px 3px 3px black;
+    position: absolute;
+    bottom: 1px;
+    left: 0;
+    right: 0;
+    height: 20px;
+    width: 225px;
+    background: rgba(0,0,0,.2);
+}
+
+footer#text2 {
+    font-family: Consolas;
+    text-align: left;
+    text-shadow: 3px 3px 3px black;
+    position: absolute;
+    bottom: 225px;
+    left: 50%;
+    right: 0;
+    height: 20px;
+    width: 20px;
+    background: rgba(0,0,0,.2);
+    text-decoration: none;
+    color: #FCEE0C;
+}
+
+a:link#text3 {
+    color: #FCEE0C;
+    text-decoration: none;
+}
+
+a:visited#text3 {
+    color: #FCEE0C;
+    text-decoration: none;
+}
+
+a:hover#text3 {
+    text-decoration: underline;
+}

@@ -1,0 +1,255 @@
+﻿@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800&display=swap");
+
+
+body {
+    background-image: url('ss_872822c5e50dc71f345sdsd416098d29fc3ae5cd26c1.png');
+    font-family: "Poppins", sans-serif;
+}
+
+h1 {
+    font-family: "Poppins", sans-serif;
+    color: #EC0B43;
+}
+
+h2 {
+    font-family: "Poppins", sans-serif;
+    color: #EC0B43;
+}
+
+h3 {
+    font-family: "Poppins", sans-serif;
+    color: #EC0B43;
+}
+
+p {
+    color: #EC0B43;
+    font-family: Arial;
+}
+
+label {
+    font-family: "Poppins", sans-serif;
+    color: #EC0B43;
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    font-family: Arial;
+}
+
+li {
+    float: left;
+}
+
+    li:last-child {
+        border-right: none;
+    }
+
+    li a {
+        display: block;
+        color: #EC0B43;
+        text-align: center;
+        padding: 14px 16px;
+        text-decoration: none;
+    }
+
+    li#img {
+        width: 20%;
+        height: min-content;
+    }
+
+    li a:hover:not(.active) {
+        background-color: #111;
+    }
+
+.active {
+    background-color: #111;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+.row > .column {
+    padding: 0 8px;
+}
+
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.column {
+    float: left;
+    width: 25%;
+}
+
+img#seth {
+    height: 100%;
+    width: 100%;
+}
+
+
+
+
+
+/* Button used to open the contact form - fixed at the bottom of the page */
+
+/* The popup form - hidden by default */
+.form-popup {
+    display: none;
+    position: fixed;
+    bottom: 0;
+    right: 15px;
+    border: 3px solid #ff184c;
+    z-index: 9;
+}
+
+/* Add styles to the form container */
+.form-container {
+    max-width: 300px;
+    padding: 10px;
+    background-color: #141114;
+    margin: 10px 0;
+    border-radius: 55px;
+    padding: 0 0.4rem;
+    font-family: "Poppins", sans-serif;
+}
+
+    /* Full-width input fields */
+    .form-container input, .form-container input[type=password] {
+        width: 100%;
+        padding: 15px;
+        margin: 5px 0 22px 0;
+        border: none;
+        background: #f1f1f1;
+        border-radius: 18px;
+        padding: 20px;
+        font-family: "Poppins", sans-serif;
+    }
+
+        /* When the inputs get focus, do something */
+        .form-container input:focus, .form-container input[type=password]:focus {
+            background-color: #ddd;
+            outline: none;
+        }
+
+    /* Set a style for the submit/login button */
+
+
+    /* Add a red background color to the cancel button */
+    .form-container .cancel {
+        background-color: #ff184c;
+    }
+
+    /* Add some hover effects to buttons */
+    .form-container .btn:hover, .open-button:hover {
+        opacity: 1;
+    }
+
+
+.input-field {
+    background-color: #f0f0f0;
+    margin: 10px 0;
+    border-radius: 55px;
+    display: grid;
+    grid-template-columns: 15% 85%;
+    padding: 0 0.4rem;
+    position: relative;
+}
+
+    .input-field i {
+        text-align: center;
+        line-height: 55px;
+        color: #acacac;
+        transition: 0.5s;
+        font-size: 1.1rem;
+    }
+
+    .input-field input {
+        background: none;
+        outline: none;
+        border: none;
+        line-height: 1;
+        font-weight: 600;
+        font-size: 1.1rem;
+        color: #333;
+    }
+
+
+
+.btn {
+    width: 100%;
+    background-color: #5995fd;
+    border: none;
+    outline: none;
+    height: 49px;
+    border-radius: 49px;
+    color: #fff;
+    text-transform: uppercase;
+    font-weight: 600;
+    margin: 10px 0;
+    cursor: pointer;
+    transition: 0.5s;
+}
+
+    .btn:hover {
+        background-color: #4d84e2;
+    }
+
+
+.btnclose {
+    width: 100%;
+    background-color: #ff184c;
+    border: none;
+    outline: none;
+    height: 49px;
+    border-radius: 49px;
+    color: #fff;
+    text-transform: uppercase;
+    font-weight: 600;
+    margin: 10px 0;
+    cursor: pointer;
+    transition: 0.5s;
+}
+
+    .btnclose:hover {
+        background-color: #d40b3d;
+    }
+
+
+.btnreset {
+    width: 20%;
+    background-color: #ff184c;
+    border: none;
+    outline: none;
+    height: 49px;
+    border-radius: 49px;
+    color: #fff;
+    text-transform: uppercase;
+    font-weight: 600;
+    margin: 10px 0;
+    cursor: pointer;
+    transition: 0.5s;
+}
+
+    .btnreset:hover {
+        background-color: #d40b3d;
+    }
+
+
+.centernav {
+    text-align: center;
+    margin: 0 auto;
+    display: block;
+    width: 150px; /* fixed width */
+    text-decoration: none;
+    float: none;
+    left: 50%;
+    transform: translate(175%, 100%);
+}
+
+

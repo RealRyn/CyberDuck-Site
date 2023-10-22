@@ -1,0 +1,180 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site1.master.cs" Inherits="WebApplication4.Site1" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <title></title>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+
+    </asp:ContentPlaceHolder>
+    <link href="Styles/StyleSheet1.css" rel="stylesheet" />
+    <link href="/Styles/StyleSheet2.css" rel="stylesheet" />
+
+    <link href="/Styles/hover.css" rel="stylesheet" />
+    <script src="/JavaScript Files/logincode.js"></script>
+
+    <style>
+        body {
+  overflow-y: hidden; /* Hide vertical scrollbar */
+  overflow-x: hidden; /* Hide horizontal scrollbar */
+}
+    </style>
+</head>
+<body>
+    <!-- navgation bar !-->
+        <ul style="margin:0 auto; list-style:none; width:98%;">
+
+                   <li style="float:right; width:10%; transform: translate(0%, 50%);"><button onclick="location.href='https://localhost:44319/Pages/loginpage'" class="btnclose">LOGIN</button></li>
+                               <li style="float:right; width:10%; transform: translate(-15%, 50%);"><button onclick="location.href='https://localhost:44319/Pages/register'" class="btnclose">REGISTER</button></li>
+                                           <li style="float:right; transform: translate(0%, 0%); font-size:10px; margin-right:-100px;" ><h1 id="title"> User: <%=Session["name"].ToString() %></h1></li>
+
+
+                                    <li id="img" style="float:left">
+                            <a href="/Pages/home.aspx"><img id="seth" src="/Pictures/sitelogonoshadow.png" /></a></li>
+        <li style="float:left" class="hvr-shutter-out-vertical centernav"><a href="/Pages/home.aspx">Home</a></li>
+
+        <li style="float:left" class="hvr-shutter-out-vertical centernav"><a href="/Pages/shop.aspx">Shop</a>
+        </li>
+
+                    <li style="float:left" class="hvr-shutter-out-vertical centernav dropbtn fa fa-caret-down" onclick="myFunction1()">
+            <a class="dropbtn fa fa-caret-down"> Tools</a>
+                           
+
+        </li>
+
+                          <div  class="dropdown-content" id="myDropdown1" style="position:absolute; margin-left:925px; margin-top:95px">
+                    <a class="hvr-shutter-out-vertical " href="/Pages/tools.aspx">Tools</a>
+                                                  <a class="hvr-shutter-out-vertical " href="/Pages/tictactoe.aspx">Tic-Tac-Punk    </a>
+
+                    <a  class="hvr-shutter-out-vertical " href="/Pages/UpdateTable.aspx">Update Table</a>
+
+                </div>
+
+
+        <li style="float:left" class="hvr-shutter-out-vertical centernav dropbtn fa fa-caret-down" onclick="myFunction()">
+            <a class="dropbtn fa fa-caret-down"> Guide</a>
+                           
+
+        </li>
+
+                          <div  class="dropdown-content" id="myDropdown" style="position:absolute; margin-left:1085px; margin-top:95px">
+                    <a class="hvr-shutter-out-vertical " href="/Pages/guide.aspx">Guide</a>
+                    <a  class="hvr-shutter-out-vertical " href="/Pages/randomizer.aspx">Randomizer</a>
+                         <a  class="hvr-shutter-out-vertical " href="/Pages/map.aspx">Map</a>
+                                 <a  class="hvr-shutter-out-vertical " href="/Pages/jukebox.aspx">JukeBox</a>
+                         <a  class="hvr-shutter-out-vertical " href="/Pages/forecast.aspx">Forecast</a>
+             <a  class="hvr-shutter-out-vertical " href="/Pages/dangers.aspx">Dangers</a>
+                                           <a  class="hvr-shutter-out-vertical " href="/Pages/aboutus.aspx">About</a>
+
+                </div>
+
+
+
+                   <li style="float:left" id="adminHide" class="hvr-shutter-out-vertical centernav"><a href="/Pages/AdminRedirect.aspx">Admin</a></li>
+
+
+
+         </ul>
+
+
+
+        <footer id="logout">
+                           <li style="float:left" class="hvr-shutter-out-vertical centernav"><a href="../Pages/logout.aspx">Log Out</a></li>
+
+    </footer>
+
+    
+        <footer id="pic" >
+
+<%--                                        <img src="/Pictures/profilepicguest.png" />--%>
+                <div id="randImage"></div>
+                            <div id="tester"></div>
+
+    </footer>
+
+        <div>
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+
+
+            </asp:ContentPlaceHolder>
+        </div>
+
+
+     
+    
+
+</body>
+</html>
+
+<script> 
+    var session = '<%= Session["login"].ToString() %>';
+    if (session == "no") {
+        document.getElementById("logout").style.display = "none";
+
+    }
+    else {
+        document.getElementById("pic").style.display = "none";
+
+    }
+    var sessionAdmin = '<%= Session["admin"].ToString() %>';
+    if (sessionAdmin == "no") {
+        document.getElementById("adminHide").style.display = "none";
+
+
+    }
+
+    ImageArray = new Array();
+    ImageArray[0] = '<img src="../Pictures/pfps/davidpfp1.png" />';
+    ImageArray[1] = '<img src="../Pictures/pfps/davidpfp2.png" />';;
+    ImageArray[2] = '<img src="../Pictures/pfps/faradaypfp.png" />';;
+    ImageArray[3] = '<img src="../Pictures/pfps/mainepfp.png" />';;
+    ImageArray[4] = '<img src="../Pictures/pfps/rebpfp.png" />';;
+    ImageArray[5] = '<img src="../Pictures/profilepicguest.png" />';;
+
+    window.onload = function getRandomImage() {
+        var num = Math.floor(Math.random() * 6);
+        var img = ImageArray[num];
+            document.getElementById("randImage").innerHTML = (img);
+            console.log("mewwwwwwwwwww");
+        
+
+    }
+
+
+    /* When the user clicks on the button, 
+toggle between hiding and showing the dropdown content */
+    function myFunction() {
+        document.getElementById("myDropdown").classList.toggle("show");
+    }
+
+    // Close the dropdown if the user clicks outside of it
+    window.onclick = function (e) {
+        if (!e.target.matches('.dropbtn')) {
+            var myDropdown = document.getElementById("myDropdown");
+            if (myDropdown.classList.contains('show')) {
+                myDropdown.classList.remove('show');
+            }
+            var myDropdown1 = document.getElementById("myDropdown1");
+            myDropdown1.classList.remove('show');
+
+        }
+    }
+
+
+    function myFunction1() {
+        document.getElementById("myDropdown1").classList.toggle("show");
+    }
+
+    //// Close the dropdown if the user clicks outside of it
+    //window.onclick = function (e) {
+    //    if (!e.target.matches('.dropbtn')) {
+    //        var myDropdown = document.getElementById("myDropdown1");
+    //        if (myDropdown.classList.contains('show')) {
+    //            myDropdown.classList.remove('show');
+    //        }
+    //    }
+    //}
+</script>
+
+

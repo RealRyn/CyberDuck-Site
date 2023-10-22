@@ -1,0 +1,372 @@
+﻿
+
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800&display=swap");
+
+@font-face {
+    font-family: 'rajdhani-medium';
+    src: url('../fonts/rajdhani-medium.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'chakrapetch-bold';
+    src: url('../fonts/chakrapetch-bold.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'librebarcode128text-regular';
+    src: url('../fonts/librebarcode128text-regular.ttf') format('truetype');
+}
+
+body {
+    background: url('../Pictures/ss_872822c5e50dc71f345sdsd416098d29fc3ae5cd26c1.png') no-repeat fixed;
+    height: 1000%;
+    top: 0;
+    left: 0;
+    background-size: cover;
+}
+
+.outcome {
+    position: absolute;
+    top: 8px;
+    right: 16px;
+    font-size: 18px;
+}
+
+.font {
+    font-family: 'rajdhani-medium';
+    color: #EC0B43;
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    font-family: Arial;
+}
+
+
+li {
+    float: left;
+    font-family: 'chakrapetch-bold';
+    font-size: 20px;
+}
+
+    li:last-child {
+        border-right: none;
+    }
+
+    li a {
+        display: block;
+        color: #EC0B43;
+        text-align: center;
+        padding: 14px 16px;
+        text-decoration: none;
+    }
+
+    li i {
+        display: block;
+        color: #EC0B43;
+        text-align: center;
+        padding: 14px 16px;
+        text-decoration: none;
+    }
+
+    li#img {
+        width: 20%;
+        height: min-content;
+    }
+
+
+
+* {
+    box-sizing: border-box;
+}
+
+.row > .column {
+    padding: 0 8px;
+}
+
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.column {
+    float: left;
+    width: 25%;
+}
+
+img#seth {
+    height: 100%;
+    width: 100%;
+}
+
+
+
+
+
+/* Button used to open the contact form - fixed at the bottom of the page */
+
+/* The popup form - hidden by default */
+.form-popup {
+    display: none;
+    position: fixed;
+    bottom: 0;
+    right: 15px;
+    z-index: 9;
+}
+
+/* Add styles to the form container */
+.form-container {
+    max-width: 300px;
+    padding: 10px;
+    margin: 10px 0;
+    border-radius: 55px;
+    padding: 0 0.4rem;
+    font-family: 'chakrapetch-bold';
+}
+
+    /* Full-width input fields */
+    .form-container input, .form-container input[type=password] {
+        width: 100%;
+        padding: 15px;
+        margin: 5px 0 22px 0;
+        border: none;
+        background: #f1f1f1;
+        border-radius: 18px;
+        padding: 20px;
+        font-family: 'chakrapetch-bold';
+    }
+
+        /* When the inputs get focus, do something */
+        .form-container input:focus, .form-container input[type=password]:focus {
+            background-color: #ddd;
+            outline: none;
+        }
+
+    /* Set a style for the submit/login button */
+
+
+    /* Add a red background color to the cancel button */
+    .form-container .cancel {
+        background-color: #ff184c;
+    }
+
+    /* Add some hover effects to buttons */
+    .form-container .btn:hover, .open-button:hover {
+        opacity: 1;
+    }
+
+
+.input-field {
+    background-color: #f0f0f0;
+    margin: 10px 0;
+    border-radius: 55px;
+    display: grid;
+    grid-template-columns: 15% 85%;
+    padding: 0 0.4rem;
+    position: relative;
+}
+
+    .input-field i {
+        text-align: center;
+        line-height: 55px;
+        color: #acacac;
+        transition: 0.5s;
+        font-size: 1.1rem;
+    }
+
+    .input-field input {
+        background: none;
+        outline: none;
+        border: none;
+        line-height: 1;
+        font-weight: 600;
+        font-size: 1.1rem;
+        color: #333;
+    }
+
+
+
+.btn {
+    width: 100%;
+    background-color: #5995fd;
+    border: none;
+    outline: none;
+    height: 49px;
+    border-radius: 49px;
+    color: #fff;
+    text-transform: uppercase;
+    font-weight: 600;
+    margin: 10px 0;
+    cursor: pointer;
+    transition: 0.5s;
+    font-family: 'chakrapetch-bold';
+}
+
+    .btn:hover {
+        background-color: #4d84e2;
+    }
+
+
+.btnclose {
+    width: 100%;
+    background-color: #ff184c;
+    border: none;
+    outline: none;
+    height: 49px;
+    border-radius: 49px;
+    color: #fff;
+    text-transform: uppercase;
+    font-weight: 600;
+    margin: 10px 0;
+    cursor: pointer;
+    transition: 0.5s;
+    font-family: 'chakrapetch-bold';
+}
+
+    .btnclose:hover {
+        background-color: #d40b3d;
+    }
+
+
+.centernav {
+    text-align: center;
+    margin: 0 auto;
+    display: block;
+    width: 150px; /* fixed width */
+    text-decoration: none;
+    float: none;
+    left: 50%;
+    transform: translate(175%, 80%);
+}
+
+footer#logout {
+    font-family: Consolas;
+    text-align: right;
+    color: #FCEE0C;
+    text-shadow: 3px 3px 3px black;
+    position: absolute;
+    bottom: 80px;
+    left: 1500px;
+    right: 0px;
+    height: 20px;
+    width: 225px;
+}
+
+footer#text2 {
+    font-family: Consolas;
+    text-align: left;
+    text-shadow: 3px 3px 3px black;
+    position: absolute;
+    bottom: 1px;
+    left: 225px;
+    right: 0;
+    height: 20px;
+    width: 170px;
+    background: rgba(0,0,0,.2);
+    text-decoration: none;
+    color: #FCEE0C;
+}
+
+footer#pic {
+    font-family: Consolas;
+    text-align: right;
+    color: #FCEE0C;
+    text-shadow: 3px 3px 3px black;
+    position: absolute;
+    bottom: 210px;
+    left: 1680px;
+    right: 0px;
+    height: 20px;
+    width: 225px;
+}
+
+div#randTxt {
+    font-family: Consolas;
+    text-align: center;
+    color: #FCEE0C;
+    text-shadow: 3px 3px 3px black;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+.navbar {
+    overflow: hidden;
+}
+
+    .navbar a {
+        float: left;
+        font-size: 16px;
+        text-align: center;
+        padding: 14px 16px;
+        text-decoration: none;
+    }
+
+.dropdown {
+    float: left;
+    overflow: hidden;
+}
+
+    .dropdown .dropbtn {
+        cursor: pointer;
+        font-size: 16px;
+        border: none;
+        outline: none;
+        padding: 14px 16px;
+        margin: 0;
+    }
+
+    .navbar a:hover, .dropdown:hover .dropbtn, .dropbtn:focus {
+    }
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+    .dropdown-content a {
+        float: none;
+        padding: 12px 16px;
+        text-decoration: none;
+        display: block;
+        text-align: left;
+    }
+
+        .dropdown-content a:hover {
+        }
+
+.show {
+    display: block;
+}
+
+
+
+a:not([data-attr="text3"]) {
+    font-family: 'chakrapetch-bold';
+    font-size: 20px;
+    display: block;
+    color: #EC0B43;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+    a:last-child {
+        border-right: none;
+    }
+
